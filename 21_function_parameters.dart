@@ -7,7 +7,10 @@
 
 void main() {
   var area = findArea(10, 5);
-  print('Area = $area');
+  var area2 = findArea2(breadth: 5,10);
+  var area3 = findArea3(10);
+  var area4 = findArea4(12);
+  print('Area = $area4');
 }
 
 // Function with two required positional parameters
@@ -31,7 +34,7 @@ int findArea3(int length, {int breadth = 50}) {
 int findArea4(int length, [int? breadth]) {
   // Here the breadth should be assigned before accessing
   // else it will lead to runtime exception
-  return length * breadth!;
+  return length * (breadth ?? 12);
 }
 
 // Function with required parameter and optional default parameter
