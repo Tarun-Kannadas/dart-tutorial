@@ -28,10 +28,11 @@ class Student {
   }
 
   // Named constructor
-  Student.withRollNoNameAndAge(int rollNo, String name, [int? age]) {
+  Student.withRollNoNameAndAge(int rollNo, String name, [int? age1]) {
     print('Named Constructor called');
     this.rollNo = rollNo;
     this.name = name;
+    this.age = age1;
     print('Age = $age');
   }
 
@@ -43,5 +44,10 @@ class Student {
 
 void main() {
   var s1 = Student.withRollNoAndName(30, 'Harry');
+  var s2 = Student(07, "Ashin Madhu");
+  // var s2 = Student();
+  var s3 = Student.withRollNoNameAndAge(18, "Tarun Kannadas", 23);
   s1.study();
+  s2.study();
+  s3.study();
 }

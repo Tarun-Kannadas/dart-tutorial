@@ -5,8 +5,8 @@
 // Member functions or methods
 
 class Student {
-  int? rollNo; // instance variable | field variable
-  String? name; // instance variable | field variable
+  int? rollNo = 18; // instance variable | field variable
+  String? name = "Tarun"; // instance variable | field variable
 
   // member function | method
   void study() {
@@ -16,8 +16,12 @@ class Student {
 
 void main() {
   var s1 = Student();
+
+  s1.study();
+
   s1.rollNo = 20;
   s1.name = 'Barbie';
+  s1.study();
 
   s1.rollNo = 10;
   s1.name = 'John';
