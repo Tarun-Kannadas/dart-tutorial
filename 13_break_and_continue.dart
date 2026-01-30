@@ -31,15 +31,21 @@ void main() {
 
 
   // Defining a nested for loop with `continue`
-  for(int i = 0; i <= 2; i++) {
-    for(int j = 0; j <= 2; j++) {
-      if(j == 1) {
+  for(int i = 0; i <= 3; i++) {
+    if(i == 2) {
+      // This inner for loop will skip the execution of upcoming statements
+      // The inner loop iteration variable will be updated and looping continues
+      continue;
+    }
+    for(int j = 0; j <= 3; j++) {
+      if(j == 2) {
         // This inner for loop will skip the execution of upcoming statements
         // The inner loop iteration variable will be updated and looping continues
         continue;
       }
       print('$i,$j');
+      print('|');
     }
   }
-  // OUTPUT: 0,0 | 0,2 | 1,0 | 1,2 | 2,0 | 2,2
+  // OUTPUT: 0,0 | 0,1 | 0,3 | 1,0 | 1,1 | 1,3 | 3,0 | 3,1 | 3,3
 }

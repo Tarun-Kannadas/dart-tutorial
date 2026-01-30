@@ -11,6 +11,8 @@ void main() {
   student['class'] = 'flutter';
   student['rollNo'] = 20;
 
+  print(student);
+
   student = {
     'name': 'Anothername',
     'age': 19,
